@@ -36,8 +36,10 @@ def ortho_proj(a,b): #orthogonal projection of b onto a
     denominator = a.dot(a)
 
     proj = (numerator/denominator)*a
-    return proj
-
+    output = []
+    for i in range(0,len(proj)):
+        output.append (str(Fraction(proj[i]).limit_denominator()))
+    return output
 
 a = [1,2]
 b = [2,1]
